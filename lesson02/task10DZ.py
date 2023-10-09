@@ -13,10 +13,10 @@ num0 = 0
 num1 = 0
 
 
-    
+
 for _ in range(n):
     x = int(input("Введите значение монетки - 0 или -1 : "))
-    
+
     if x == 0:
         num0 += 1
     else:
