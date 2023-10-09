@@ -21,3 +21,10 @@ for num in numbers:
     if result.count(num) == 0:
         result.append(num)
 print(len(result))'''
+
+
+# Вариант 3 - Изменяем исходный список
+'''for num in numbers[:]:
+    while numbers.count(num) > 1:
+        numbers.remove(num)
+print(len(numbers))'''
