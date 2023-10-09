@@ -31,3 +31,8 @@ for dict_item in list_1:
         unique_kyes.add(value_dict)  # Кладём значение без обрашения по ключу (dict_item[key])
 print(unique_kyes)
 
+# Вариант 2
+unique_kyes = set()
+for dict_item in list_1:
+    unique_kyes.update(dict_item.values())
+print(unique_kyes)
