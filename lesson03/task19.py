@@ -36,3 +36,7 @@ print(list_result)'''
 for _ in range(k):
     numbers.insert(0, numbers.pop())
 print(numbers)
+
+# Вариант 4 - так как исходный список поменял, создадим его ещё раз
+'''numbers = [1, 2, 3, 4, 5]
+print(numbers[-k:] + numbers[:-k])'''
