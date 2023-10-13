@@ -9,3 +9,13 @@
 # Для решения данной задачи используйте функцию
 # .split()
 
+stroka = "a a a b c a a d c d d"
+stroka = stroka.split()
+counter={}
+
+for i in stroka:
+    if i in counter:
+        print(f'{i}_{counter[i]}', end=" ")
+    else:
+        print(f'{i}', end=" ")
+    counter[i] = counter.get(i,0) + 1
