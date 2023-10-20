@@ -7,15 +7,15 @@ def IntegersFromAtoB(num1, num2):
     if num1 == num2:
         return num2
 
-    if num1 > num2:
-        return f'{num1} {IntegersFromAtoB(num1 - 1, num2)}'
-
     if num1 < num2:
         return f'{num1} {IntegersFromAtoB(num1 + 1, num2)}'
 
+    if num1 > num2:
+        return f'{num1} {IntegersFromAtoB(num1 - 1, num2)}'
+
+    
 a = int(input("Enter an integer A:\n"))
 b = int(input("Enter an integer B:\n"))
-print(IntegersFromAtoB(a, b))
-        
-    
+
+print(IntegersFromAtoB(a, b))  
     
