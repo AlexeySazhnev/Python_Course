@@ -1,5 +1,6 @@
 from data_create import name_data, surname_data, phone_data, address_data
 
+
 def input_data():
     name = name_data()
     surname = surname_data()
@@ -26,6 +27,7 @@ def input_data():
     else:
         with open('data_second_variant.csv', 'a', encoding='utf-8') as file:
             file.write(f'{name};{surname};{phone};{address}\n\n')
+
 
 def print_data():
     print('Вывожу данные для Вас из 1-ого файла\n')
