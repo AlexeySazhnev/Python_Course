@@ -1,4 +1,9 @@
 from data_create import name_data, surname_data, phone_data, address_data
+import os
+
+
+def get_path(mpath: str) -> os.path:
+    return os.path.join(os.getcwd(), mpath)
 
 
 def input_data():
@@ -48,3 +53,46 @@ def print_data():
         data_second = list(file.readlines())
         print(*data_second)
     return data_first, data_second
+
+
+def put_data():
+    print('Из какого файла Вы хотите изменить данные?')
+    data_first, data_second = print_data()
+    number_file = int(input('Введите номер файла: '))
+
+    while number_file != 1 and number_file != 2:
+        print('Ты дурак?! Даю тебе последний шанс')
+        number_file = int(input('Введите номер файла: '))
+
+    if number_file == 1:  # Можно сделать нумерацию внутри файла
+        print("Какую именно запись по счету Вы хотите изменить?")
+        number_journal = int(input('Введите номер записи: '))
+
+        # ТУТ НАПИСАТЬ КОД
+        # Можно добавить проверку, чтобы человек не выходил за пределы записей
+    else:
+        print("Какую именно запись по счету Вы хотите изменить?")
+        number_journal = int(input('Введите номер записи: '))
+        # ТУТ НАПИСАТЬ КОД
+        # Можно добавить проверку, чтобы человек не выходил за пределы записи
+
+
+def delete_data():
+    print('Из какого файла Вы хотите удалить данные?')
+    data_first, data_second = print_data()
+    number_file = int(input('Введите номер файла: '))
+
+    while number_file != 1 and number_file != 2:
+        print('Ты дурак?! Даю тебе последний шанс')
+        number_file = int(input('Введите номер файла: '))
+
+    if number_file == 1:  # Можно сделать нумерацию внутри файла
+        print("Какую именно запись по счету Вы хотите удалить?")
+        number_journal = int(input('Введите номер записи: '))
+        # Можно добавить проверку, чтобы человек не выходил за пределы записи
+        # ТУТ НАПИСАТЬ КОД
+    else:
+        print("Какую именно запись по счету Вы хотите удалить?")
+        number_journal = int(input('Введите номер записи: '))
+        # Можно добавить проверку, чтобы человек не выходил за пределы записи
+        # ТУТ НАПИСАТЬ КОД
